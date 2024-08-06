@@ -1,0 +1,2 @@
+jdk=com.xq.core.serializer.JdkSerializer
+b=com.xq.core.serializer.HessianSerializer

@@ -22,7 +22,6 @@ public class EasyProviderExample {
 
         // 启动 Web 服务器
         VertxHttpServer httpServer = new VertxHttpServer();
-
         httpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
     }
 }

@@ -1,5 +1,7 @@
 package com.xq.core.config;
 
+import com.xq.core.constant.SerializerKeys;
+import com.xq.core.serializer.Serializer;
 import lombok.Data;
 
 /**
@@ -32,6 +34,11 @@ public class RpcConfig {
      *  模拟调用
      */
     private Boolean mock = false;
+
+    /**
+     *  序列化器
+     */
+    private String serializer = SerializerKeys.JDK;
 
 }
 

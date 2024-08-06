@@ -1,10 +1,12 @@
 package com.xq.core.server;
 
+import com.xq.core.RpcApplication;
 import com.xq.core.mode.RpcRequest;
 import com.xq.core.mode.RpcResponse;
 import com.xq.core.registry.LocalRegistry;
 import com.xq.core.serializer.JdkSerializer;
 import com.xq.core.serializer.Serializer;
+import com.xq.core.serializer.SerializerFactory;
 import io.vertx.core.Handler;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.http.HttpServerRequest;
@@ -18,10 +20,13 @@ import java.lang.reflect.Method;
  */
 public class HttpServerHandler implements Handler<HttpServerRequest> {
 
+    // 指定序列化器
+    final Serializer serializer = SerializerFactory.getInstance(RpcApplication.getRpcConfig().getSerializer());
+
     @Override
     public void handle(HttpServerRequest request) {
-        // 指定序列化器
-        final Serializer serializer = new JdkSerializer();
+//        // 指定序列化器
+//        final Serializer serializer = new JdkSerializer();
 
         // 记录日志
         System.out.println("Received request: " + request.method() + " " + request.uri());
