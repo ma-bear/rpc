@@ -1,4 +1,4 @@
-package com.xq.rpc.registry;
+package com.xq.core.registry;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

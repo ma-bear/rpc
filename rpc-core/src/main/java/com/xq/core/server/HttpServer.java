@@ -1,4 +1,4 @@
-package com.xq.rpc.server;
+package com.xq.core.server;
 
 /**
  * @author xq

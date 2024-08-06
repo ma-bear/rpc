@@ -1,4 +1,4 @@
-package com.xq.rpc.proxy;
+package com.xq.core.proxy;
 
 import java.lang.reflect.Proxy;
 

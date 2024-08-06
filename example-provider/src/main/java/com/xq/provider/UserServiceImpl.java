@@ -1,7 +1,7 @@
-package com.xq.example.provider;
+package com.xq.provider;
 
-import com.example.common.mode.User;
-import com.example.common.service.UserService;
+import com.xq.common.mode.User;
+import com.xq.common.service.UserService;
 
 /**
  * @author xq

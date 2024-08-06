@@ -1,4 +1,4 @@
-package com.xq.rpc.mode;
+package com.xq.core.mode;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

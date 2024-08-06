@@ -1,4 +1,4 @@
-package com.xq.rpc.server;
+package com.xq.core.server;
 
 import io.vertx.core.Vertx;
 
@@ -6,7 +6,7 @@ import io.vertx.core.Vertx;
  * @author xq
  * @create 2024/8/5 11:01
  */
-public class VertxHttpServer implements HttpServer{
+public class VertxHttpServer implements HttpServer {
 
     @Override
     public void doStart(int port) {

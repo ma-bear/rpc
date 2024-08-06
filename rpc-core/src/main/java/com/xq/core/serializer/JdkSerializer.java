@@ -1,4 +1,4 @@
-package com.xq.rpc.serializer;
+package com.xq.core.serializer;
 
 /**
  * @author xq

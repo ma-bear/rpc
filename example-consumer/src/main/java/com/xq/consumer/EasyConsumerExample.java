@@ -1,7 +1,8 @@
-package com.xq.example.consumer;
+package com.xq.consumer;
 
-import com.xq.example.common.mode.User;
-import com.xq.example.common.service.UserService;
+import com.xq.common.mode.User;
+import com.xq.common.service.UserService;
+import com.xq.core.proxy.ServiceProxyFactory;
 
 /**
  * @author xq
@@ -11,7 +12,7 @@ public class EasyConsumerExample {
 
     public static void main(String[] args) {
         // todo 需要获取 UserService 实现类对象
-        UserService userService = null;
+        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
         User user = new User();
         user.setName("tom");
         // 调用

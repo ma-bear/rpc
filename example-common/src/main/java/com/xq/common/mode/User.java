@@ -1,4 +1,4 @@
-package com.xq.example.common.mode;
+package com.xq.common.mode;
 
 import java.io.Serializable;
 

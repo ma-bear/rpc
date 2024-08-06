@@ -1,11 +1,11 @@
-package com.xq.rpc.proxy;
+package com.xq.core.proxy;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
-import com.xq.rpc.mode.RpcRequest;
-import com.xq.rpc.mode.RpcResponse;
-import com.xq.rpc.serializer.JdkSerializer;
-import com.xq.rpc.serializer.Serializer;
+import com.xq.core.mode.RpcRequest;
+import com.xq.core.mode.RpcResponse;
+import com.xq.core.serializer.JdkSerializer;
+import com.xq.core.serializer.Serializer;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
