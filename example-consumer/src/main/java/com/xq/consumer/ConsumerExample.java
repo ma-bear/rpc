@@ -2,7 +2,9 @@ package com.xq.consumer;
 
 import com.xq.common.mode.User;
 import com.xq.common.service.UserService;
+import com.xq.core.config.RpcConfig;
 import com.xq.core.proxy.ServiceProxyFactory;
+import com.xq.core.utils.ConfigUtils;
 
 
 /**
@@ -25,6 +27,9 @@ public class ConsumerExample {
         }
 
         System.out.println(userService.getNumber());
+
+//        RpcConfig rpcConfig = ConfigUtils.loadConfig(RpcConfig.class, "rpc");
+//        System.out.println(rpcConfig);
 
     }
 }
