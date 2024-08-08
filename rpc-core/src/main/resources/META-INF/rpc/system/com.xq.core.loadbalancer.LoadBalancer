@@ -1,0 +1,3 @@
+roundRobin=com.xq.core.loadbalancer.RoundRobinLoadBalancer
+random=com.xq.core.loadbalancer.RandomLoadBalancer
+consistentHash=com.xq.core.loadbalancer.ConsistentHashLoadBalancer

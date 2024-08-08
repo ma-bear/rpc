@@ -126,7 +126,7 @@ public class EtcdRegistry implements Registry {
     public void destroy() {
         System.out.println("当前节点下线");
         // 下线节点
-        // 遍历本节点所有的 key
+        // 遍历本节点所有的 key （一个节点有多个服务名）
         for (String key : localRegisterNodeKeySet) {
             try {
                 kvClient.delete(ByteSequence.from(key, StandardCharsets.UTF_8)).get();

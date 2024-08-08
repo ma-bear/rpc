@@ -1,6 +1,8 @@
 package com.xq.core.spi;
 
 import cn.hutool.core.io.resource.ResourceUtil;
+import com.xq.core.loadbalancer.LoadBalancer;
+import com.xq.core.registry.Registry;
 import com.xq.core.serializer.Serializer;
 import lombok.extern.slf4j.Slf4j;
 
@@ -48,7 +50,7 @@ public class SpiLoader {
     /**
      * 动态加载的类列表
      */
-    private static final List<Class<?>> LOAD_CLASS_LIST = Arrays.asList(Serializer.class);
+    private static final List<Class<?>> LOAD_CLASS_LIST = Arrays.asList(Serializer.class, Registry.class, LoadBalancer.class);
 
     /**
      * 加载所有类型

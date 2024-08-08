@@ -1,5 +1,6 @@
 package com.xq.core.config;
 
+import com.xq.core.constant.LoadBalancerKeys;
 import com.xq.core.constant.SerializerKeys;
 import com.xq.core.serializer.Serializer;
 import lombok.Data;
@@ -45,5 +46,11 @@ public class RpcConfig {
      */
     private RegistryConfig registryConfig = new RegistryConfig();
 
+    /**
+     * 负载均衡器
+     */
+    private String loadBalancer = LoadBalancerKeys.ROUND_ROBIN;
+
 }
+
 

@@ -5,12 +5,12 @@ import com.xq.core.RpcApplication;
 import com.xq.core.config.RegistryConfig;
 import com.xq.core.config.RpcConfig;
 import com.xq.core.mode.ServiceMetaInfo;
-import com.xq.core.registry.LocalRegistry;
 import com.xq.core.registry.Registry;
 import com.xq.core.registry.RegistryFactory;
 import com.xq.core.server.HttpServer;
 import com.xq.core.server.VertxHttpServer;
 import com.xq.core.server.tcp.VertxTcpServer;
+
 
 /**
  * 服务提供者示例
@@ -22,9 +22,9 @@ public class ProviderExample {
         // RPC 框架初始化
         RpcApplication.init();
 
-        // 注册服务
+//        // 本地注册服务
         String serviceName = UserService.class.getName();
-        LocalRegistry.register(serviceName, UserServiceImpl.class);
+//        LocalRegistry.register(serviceName, UserServiceImpl.class);
 
         // 注册服务到注册中心
         RpcConfig rpcConfig = RpcApplication.getRpcConfig();
