@@ -10,6 +10,7 @@ import com.xq.core.registry.Registry;
 import com.xq.core.registry.RegistryFactory;
 import com.xq.core.server.HttpServer;
 import com.xq.core.server.VertxHttpServer;
+import com.xq.core.server.tcp.VertxTcpServer;
 
 /**
  * 服务提供者示例
@@ -39,9 +40,13 @@ public class ProviderExample {
             throw new RuntimeException(e);
         }
 
-        // 启动 web 服务
-        HttpServer httpServer = new VertxHttpServer();
-        httpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
+//        // 启动 web 服务
+//        HttpServer httpServer = new VertxHttpServer();
+//        httpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
+
+        // 启动 TCP 服务
+        VertxTcpServer tcpServer = new VertxTcpServer();
+        tcpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
     }
 }
 
