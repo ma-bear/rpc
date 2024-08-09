@@ -3,6 +3,7 @@ package com.xq.core.config;
 import com.xq.core.constant.LoadBalancerKeys;
 import com.xq.core.constant.RetryStrategyKeys;
 import com.xq.core.constant.SerializerKeys;
+import com.xq.core.constant.TolerantStrategyKeys;
 import com.xq.core.serializer.Serializer;
 import lombok.Data;
 
@@ -57,7 +58,13 @@ public class RpcConfig {
      */
     private String retryStrategy = RetryStrategyKeys.NO;
 
+    /**
+     * 容错策略
+     */
+    private String tolerantStrategy = TolerantStrategyKeys.FAIL_FAST;
+
 }
+
 
 
 

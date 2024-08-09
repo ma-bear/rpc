@@ -1,0 +1,4 @@
+failBack=com.xq.core.fault.tolerant.FailBackTolerantStrategy
+failFast=com.xq.core.fault.tolerant.FailFastTolerantStrategy
+failOver=com.xq.core.fault.tolerant.FailOverTolerantStrategy
+failSafe=com.xq.core.fault.tolerant.FailSafeTolerantStrategy
