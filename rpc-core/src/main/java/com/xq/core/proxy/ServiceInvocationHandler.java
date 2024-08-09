@@ -70,20 +70,20 @@ public class ServiceInvocationHandler implements InvocationHandler {
             requestParams.put("methodName", rpcRequest.getMethodName());
             ServiceMetaInfo selectedServiceMetaInfo = loadBalancer.select(requestParams, serviceMetaInfoList);
 
-            RpcResponse rpcResponse = null;
             try {
                 // 使用重试机制
                 RetryStrategy retryStrategy = RetryStrategyFactory.getInstance(rpcConfig.getRetryStrategy());
-                rpcResponse = retryStrategy.doRetry(() -> {
-                    // 发送 rpc 请求
-                    return VertxTcpClient.doRequest(rpcRequest, selectedServiceMetaInfo);
-                });
+                RpcResponse rpcResponse = retryStrategy.doRetry(() ->
+                        // 发送 rpc 请求
+                        VertxTcpClient.doRequest(rpcRequest, selectedServiceMetaInfo)
+                );
+                return rpcResponse.getData();
             } catch (Exception e) {
                 // 容错机制
                 TolerantStrategy tolerantStrategy = TolerantStrategyFactory.getInstance(rpcConfig.getTolerantStrategy());
                 tolerantStrategy.doTolerant(null, e);
             }
-            return rpcResponse.getData();
+
         } catch (IOException e) {
             e.printStackTrace();
         }

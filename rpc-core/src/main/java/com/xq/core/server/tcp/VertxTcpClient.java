@@ -1,5 +1,7 @@
 package com.xq.core.server.tcp;
 
+import cn.hutool.core.util.IdUtil;
+
 import com.xq.core.RpcApplication;
 import com.xq.core.constant.ProtocolConstant;
 import com.xq.core.enums.ProtocolMessageSerializerEnum;
@@ -10,7 +12,6 @@ import com.xq.core.mode.ServiceMetaInfo;
 import com.xq.core.protocol.ProtocolMessage;
 import com.xq.core.protocol.ProtocolMessageDecoder;
 import com.xq.core.protocol.ProtocolMessageEncoder;
-import cn.hutool.core.util.IdUtil;
 
 import io.vertx.core.Vertx;
 import io.vertx.core.buffer.Buffer;
@@ -36,6 +37,7 @@ public class VertxTcpClient {
      * @throws ExecutionException
      */
     public static RpcResponse doRequest(RpcRequest rpcRequest, ServiceMetaInfo serviceMetaInfo) throws InterruptedException, ExecutionException {
+        System.out.println("TCP ===========");
         // 发送 TCP 请求
         Vertx vertx = Vertx.vertx();
         NetClient netClient = vertx.createNetClient();
@@ -90,4 +92,3 @@ public class VertxTcpClient {
         return rpcResponse;
     }
 }
-

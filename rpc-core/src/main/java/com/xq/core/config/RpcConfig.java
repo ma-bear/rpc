@@ -56,7 +56,7 @@ public class RpcConfig {
     /**
      * 重试策略
      */
-    private String retryStrategy = RetryStrategyKeys.NO;
+    private String retryStrategy = RetryStrategyKeys.FIXED_INTERVAL;
 
     /**
      * 容错策略

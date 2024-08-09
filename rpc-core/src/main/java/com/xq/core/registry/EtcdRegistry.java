@@ -86,7 +86,7 @@ public class EtcdRegistry implements Registry {
 
         // 优先从绥存获取服务
         List<ServiceMetaInfo> serviceMetaInfoListCache = registryServiceCache.readCache();
-        if (serviceMetaInfoListCache != null) {
+        if (serviceMetaInfoListCache != null && !serviceMetaInfoListCache.isEmpty()) {
             System.out.println("从缓存获取服务");
             return serviceMetaInfoListCache;
         }
