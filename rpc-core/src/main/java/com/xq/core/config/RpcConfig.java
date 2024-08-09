@@ -1,6 +1,7 @@
 package com.xq.core.config;
 
 import com.xq.core.constant.LoadBalancerKeys;
+import com.xq.core.constant.RetryStrategyKeys;
 import com.xq.core.constant.SerializerKeys;
 import com.xq.core.serializer.Serializer;
 import lombok.Data;
@@ -51,6 +52,12 @@ public class RpcConfig {
      */
     private String loadBalancer = LoadBalancerKeys.ROUND_ROBIN;
 
+    /**
+     * 重试策略
+     */
+    private String retryStrategy = RetryStrategyKeys.NO;
+
 }
+
 
 

@@ -1,0 +1,2 @@
+no=com.xq.core.fault.retry.NoRetryStrategy
+fixedInterval=com.xq.core.fault.retry.FixedIntervalRetryStrategy
